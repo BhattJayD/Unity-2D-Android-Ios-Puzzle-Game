@@ -28,8 +28,9 @@ public class CharecterSelection : MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("selectedCharacter",selectedCharacter);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(2,LoadSceneMode.Single);
+        //UnityEngine.SceneManagement.SceneManager.LoadScene(2,LoadSceneMode.Single);
         //UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);   
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LEVELSELECT");
     }
     public void QuitGame()
     {
