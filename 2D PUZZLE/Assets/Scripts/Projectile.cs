@@ -36,6 +36,13 @@ public class Projectile : MonoBehaviour
         Instantiate(ps,transform.position,Quaternion.identity);
         Destroy(gameObject);
         }
+        if(GameObject.FindGameObjectWithTag("Player")==null)
+        {
+            
+            StartCoroutine(WaitLoadScene());
+            UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            
+        }
     }
     /*void OnTriggerEnter2D(Collider2D other)
     {
@@ -55,6 +62,7 @@ public class Projectile : MonoBehaviour
         if (collosion.gameObject.tag=="Player")
         {
             Destroy(collosion.gameObject);
+            FindObjectOfType<AudioManager>().Play("PlayerDead");
             StartCoroutine(WaitLoadScene());
             Instantiate(ps,transform.position,Quaternion.identity);            
             //UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().name);

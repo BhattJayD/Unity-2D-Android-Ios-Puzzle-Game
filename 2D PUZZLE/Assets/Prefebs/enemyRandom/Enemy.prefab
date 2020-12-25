@@ -39,7 +39,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53174655191384547}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e60c5479b411bd4c90ac73362774cb6, type: 3}
   m_Name: 
@@ -49,8 +49,12 @@ MonoBehaviour:
   moveSpot: {fileID: 0}
   minX: -1.641
   maxX: 1.53
-  minY: 2.18
-  maxY: 1.76
+  minY: 4.21
+  maxY: -4.29
+  timeBtwShots: 5
+  startTimeBtwShots: 3
+  Projectile: {fileID: 4334809091613657366, guid: 1a95629e7660c6644a27c837eac320cb,
+    type: 3}
 --- !u!1 &53174655875739329
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +66,8 @@ GameObject:
   - component: {fileID: 53174655875739342}
   - component: {fileID: 53174655875739343}
   - component: {fileID: 1280059131}
-  - component: {fileID: 1280059130}
+  - component: {fileID: 5830037514717250621}
+  - component: {fileID: 532327672}
   m_Layer: 0
   m_Name: AlienSpaceship
   m_TagString: Enemy
@@ -165,7 +170,7 @@ PolygonCollider2D:
       - {x: 1.15, y: -0.8}
       - {x: 1.15, y: 0.2}
       - {x: 0.65000004, y: 0.8}
---- !u!114 &1280059130
+--- !u!114 &5830037514717250621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,8 +179,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 53174655875739329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c9b4eec1f9c91e499605da667c0ff7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 13e9533e6db76a0409de3d055c88749b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ps: {fileID: 5957978944092410972, guid: 1fdb53a4fe6c9c0468903cab9264a17f, type: 3}
   Spike: {fileID: 53174655875739329}
+--- !u!114 &532327672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53174655875739329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e60c5479b411bd4c90ac73362774cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  StartWaitTime: 1
+  moveSpot: {fileID: 0}
+  minX: -1.641
+  maxX: 1.53
+  minY: 4.21
+  maxY: -4.29
+  timeBtwShots: 5
+  startTimeBtwShots: 5
+  Projectile: {fileID: 4334809091613657366, guid: 1a95629e7660c6644a27c837eac320cb,
+    type: 3}

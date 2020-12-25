@@ -16,6 +16,6 @@ public class STARTLEVELDOOR : MonoBehaviour
         Destroy (gameObject);
         }  
         //other.gameObject.transform.position=spawnPoint1.position;
-        Debug.Log("#########################################");
+        
     }
 }

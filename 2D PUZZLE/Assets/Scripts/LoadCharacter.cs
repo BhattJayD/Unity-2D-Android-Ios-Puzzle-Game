@@ -11,11 +11,11 @@ public class LoadCharacter : MonoBehaviour
     void Start()
     {
         int selectedCharacter=PlayerPrefs.GetInt("selectedCharacter");
-        Debug.Log(selectedCharacter);
+        
         GameObject prefab=CharacterPrefabs[selectedCharacter];
-        Debug.Log(prefab);
+        
         GameObject clone=Instantiate(prefab,spawnPoint.position,Quaternion.identity);
-        Debug.Log(clone);
+        
         clone.SetActive(true);
     //    label.text=prefab.name;
         

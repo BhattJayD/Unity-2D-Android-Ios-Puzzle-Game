@@ -14,6 +14,7 @@ public class spikes : MonoBehaviour
         {
             Destroy(collosion.gameObject);
             Instantiate(ps,Spike.transform.position,Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("PlayerDead");
             //UnityEngine.SceneManagement.SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             StartCoroutine(WaitLoadScene());
             //animation

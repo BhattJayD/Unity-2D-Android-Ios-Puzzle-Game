@@ -51,6 +51,9 @@ EditorBuildSettings:
     path: Assets/Scenes/test.unity
     guid: dc655acc1a2a27d4f9b9e35fdbdad50a
   - enabled: 1
+    path: Assets/Scenes/ENDLESS.unity
+    guid: 46df3c8dfb322234e9cc186d63726982
+  - enabled: 0
     path: Assets/Scenes/Last.unity
     guid: f966db29a3b4a294cb47e0657e9a7954
   m_configObjects: {}

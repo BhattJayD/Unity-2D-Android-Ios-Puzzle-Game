@@ -78,7 +78,8 @@ public class player : MonoBehaviour
                 swiprLength=(endSwipePosition-startSwipePosition).magnitude;
                 if (swipeTime<maxSwipetime && swiprLength>minSwipeDistance)
                 {
-                    swipeControl();   
+                    FindObjectOfType<AudioManager>().Play("PlayerMove");
+                    swipeControl();
                     //canMove=true;
                 }
             }
